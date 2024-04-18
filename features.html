@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/icon.png" />
+    <title>SportsTXT</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <style>
+    .c-item {
+      height: 480px;
+    }
+
+    .c-img {
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
+    .feature {
+      background-image: url("./images/home.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      height: 100dvh;
+      max-width: 100%;
+    }
+    @media only screen and (max-width: 768px) {
+      .section-1 .img-fluid {
+        display: none;
+      }
+      .section-1 p {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        color: aliceblue;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: black;
+      }
+      .section-1 h1 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        color: aliceblue;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: black;
+      }
+
+      .text-xs-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+      }
+      .text-xs-center p {
+        text-align: center;
+      }
+      .fanzone {
+        background-image: url("./images/fanzone.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 10px 0;
+      }
+      .video {
+        background-image: url("./images/video.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 10px 0;
+      }
+      .podcast {
+        background-image: url("./images/podcast.gif");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 10px 0;
+      }
+      .sms {
+        background-image: url("./images/message.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 10px 0;
+      }
+      .photo {
+        background-image: url("./images/photo.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 10px 0;
+      }
+      .poll {
+        background-image: url("./images/poll.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 10px 0;
+      }
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light bg-gradient">
+      <div class="container-lg">
+        <a class="navbar-brand" href="#">
+          <img width="150" src="./images/logo.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark active"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="feature align-items-end justify-content-center justify-content-md-start"
+    >
+      <div
+        class="col-md-8 col-sm-12 ms-md-5 d-inline-flex flex-column justify-content-center align-items-center align-items-md-start"
+        style="min-height: 100vh"
+      >
+        <h1
+          class="fw-bold text-light text-center text-md-start animate__animated animate__fadeInDown"
+        >
+          On SportsTXT, you’ll find a great mix of features enabling sports
+          clubs and athletes to connect directly with their fans.
+        </h1>
+        <a
+          href="#features"
+          class="btn btn-danger p-2 mt-3 mt-md-4 animate__animated animate__fadeInDown"
+          >Features</a
+        >
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide my-5" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="4"
+          aria-label="Slide 5"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="5"
+          aria-label="Slide 6"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img
+            src="./images/fanzone.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide 1"
+          />
+
+          <div class="carousel-caption top-0 mt-4">
+            <h1 class="display-1 fw-bolder text-capitalize">Fanzone</h1>
+            <p class="mt-5 fs-3">
+              Empower your supporters in the Fanzone, a moderated platform for
+              interaction and involvement. Fans can create public and private
+              subgroups for sharing content and building a supportive community.
+              Enhance your organization's community engagement with the Fanzone
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-item c-item">
+          <img
+            src="./images/video.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide 2"
+          />
+
+          <div class="carousel-caption top-0 mt-4">
+            <h1 class="display-1 fw-bolder text-capitalize">Video</h1>
+            <p class="mt-5 fs-3">
+              Make your members feel special by offering them workouts,
+              interviews, live matches, and even behind-the-scenes content. We
+              support a range of video platforms, so you can easily upload
+              videos from your phone.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-item c-item">
+          <img
+            src="./images/podcast.gif"
+            class="d-block w-100 c-img"
+            alt="Slide 3"
+          />
+
+          <div class="carousel-caption top-0 mt-4">
+            <h1 class="display-1 fw-bolder text-capitalize">Podcast</h1>
+            <p class="mt-5 fs-3">
+              Weekly updates, interviews, or tip of the week? Record a podcast
+              on your phone and share it with your community.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-item c-item">
+          <img
+            src="./images/message.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide 4"
+          />
+
+          <div class="carousel-caption top-0 mt-4">
+            <h1 class="display-1 fw-bolder text-capitalize">Sms</h1>
+            <p class="mt-5 fs-3">
+              Want to get your fans instantly involved with the latest updates?
+              Send personalized SMS messages straight to your members' phones
+              and show them that you value their membership.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-item c-item">
+          <img
+            src="./images/photo.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide 5"
+          />
+
+          <div class="carousel-caption top-0 mt-4">
+            <h1 class="display-1 fw-bolder text-capitalize">Photo</h1>
+            <p class="mt-5 fs-3">
+              Publish photos from, games, training sessions or events. There’s
+              no limit to how much you choose to share. Make it more personal by
+              adding emojis, customizing colors and including text. It’s a great
+              way to document and share all the big moments.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-item c-item">
+          <img
+            src="./images/poll.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide 6"
+          />
+
+          <div class="carousel-caption top-0 mt-4">
+            <h1 class="display-1 fw-bolder text-capitalize">Poll</h1>
+            <p class="mt-5 fs-3">
+              Get real-time feedback from your fans. Ask questions and test
+              their knowledge with our online quizzes and voting features.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#hero-carousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#hero-carousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <section id="features" class="section-1 container-fluid">
+      <div class="my-2">
+        <div
+          data-aos="fade-down"
+          data-aos-duration="3000"
+          id="fanzone"
+          class="fanzone d-flex justify-content-center align-items-center"
+        >
+          <div class="col-md-6 text-sm-center text-xs-center px-sm-3">
+            <h1>Fanzone</h1>
+            <p>
+              Empower your supporters in the Fanzone, a moderated platform for
+              interaction and involvement. Fans can create public and private
+              subgroups for sharing content and building a supportive community.
+              Enhance your organization's community engagement with the Fanzone.
+            </p>
+          </div>
+
+          <div>
+            <img
+              style="width: 100%"
+              class="img-fluid"
+              src="./images/fanzone.jpg"
+              alt="woman football empowerment"
+            />
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-down"
+          data-aos-duration="3000"
+          class="video bg-dark d-flex flex-row-reverse justify-content-center align-items-center"
+        >
+          <div
+            id="video"
+            class="col-md-6 ms-md-2 text-sm-center text-xs-center px-sm-3"
+          >
+            <h1 class="text-light">Video</h1>
+            <p class="text-light">
+              Make your members feel special by offering them workouts,
+              interviews, live matches, and even behind-the-scenes content. We
+              support a range of video platforms, so you can easily upload
+              videos from your phone.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img
+              class="img-fluid"
+              style="height: 100%"
+              src="./images/video.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-down"
+          data-aos-duration="3000"
+          id="podcast"
+          class="podcast bg-dark d-flex justify-content-center align-items-center"
+        >
+          <div class="col-md-6 text-sm-center text-xs-center px-sm-3">
+            <h1 class="text-light">Podcast</h1>
+            <p class="text-light">
+              Weekly updates, interviews, or tip of the week? Record a podcast
+              on your phone and share it with your community.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img
+              class="img-fluid"
+              style="height: 100%"
+              src="./images/podcast.gif"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-down"
+          data-aos-duration="3000"
+          id="sms"
+          class="sms d-flex flex-row-reverse justify-content-center align-items-center"
+        >
+          <div class="col-md-6 ms-md-2 text-sm-center text-xs-center px-sm-3">
+            <h1>SMS</h1>
+            <p>
+              Want to get your fans instantly involved with the latest updates?
+              Send personalized SMS messages straight to your members' phones
+              and show them that you value their membership.
+            </p>
+          </div>
+          <div>
+            <img
+              class="img-fluid"
+              style="width: 100%"
+              src="./images/message.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-down"
+          data-aos-duration="3000"
+          id="photo"
+          class="photo bg-dark d-flex justify-content-center align-items-center"
+        >
+          <div class="col-md-6 text-sm-center text-xs-center px-sm-3">
+            <h1 class="text-light">Photo</h1>
+            <p class="text-light">
+              Publish photos from, games, training sessions or events. There’s
+              no limit to how much you choose to share. Make it more personal by
+              adding emojis, customizing colors and including text. It’s a great
+              way to document and share all the big moments.
+            </p>
+          </div>
+          <div>
+            <img
+              class="img-fluid"
+              style="height: 100%"
+              src="./images/photo.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-down"
+          data-aos-duration="3000"
+          id="poll"
+          class="poll bg-dark d-flex flex-row-reverse justify-content-center align-items-center"
+        >
+          <div class="col-md-6 ms-md-2 text-sm-center text-xs-center px-sm-3">
+            <h1 class="text-light">Polls</h1>
+            <p class="text-light">
+              Get real-time feedback from your fans. Ask questions and test
+              their knowledge with our online quizzes and voting features
+            </p>
+          </div>
+          <div class="">
+            <img
+              class="img-fluid"
+              style="height: 100%"
+              src="./images/poll.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="my-5 d-flex flex-column justify-content-center align-items-center"
+      style="min-height: 70dvh"
+    >
+      <div
+        data-aos="fade-down"
+        data-aos-duration="3000"
+        class="my-5 d-flex flex-column justify-content-center align-items-center"
+      >
+        <h1>Get in touch</h1>
+        <p class="text-center">Build A Unified Community with SportsTXT</p>
+      </div>
+    </section>
+    <footer class="container-fluid pt-5 bg-dark text-light">
+      <div class="row justify-content-around align-items-start flex-wrap">
+        <div class="col-md-4">
+          <img class="img-fluid" src="./images/logo.png" alt="" />
+          <div class="text-center">
+            <a class="text-decoration-none text-light btn" href="index.html"
+              >Home</a
+            >
+            <a class="text-decoration-none text-light btn" href="#features"
+              >Features</a
+            >
+            <a class="text-decoration-none text-light btn" href="about.html"
+              >About Us</a
+            >
+            <a class="text-decoration-none text-light btn" href="contact.html"
+              >Contact Us</a
+            >
+          </div>
+          <div class="text-center">
+            <a class="text-decoration-none text-light btn" href="#">Privacy</a>
+            <a class="text-decoration-none text-light btn" href="#">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p
+          class="text-center text-light btn mt-5 d-flex justify-content-center align-items-center"
+        >
+          Copyright SportsTxt &#169; 2024
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+  </body>
+</html>
